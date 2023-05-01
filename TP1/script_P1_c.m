@@ -25,6 +25,7 @@ for i = 1:length(T)
             x1(n+1) = x1(n) + T(i).*x2(n);
             x2(n+1) = x2(n) + T(i).*(e(j).*((1-(x1(n)).^2).*x2(n)) - x1(n));
         end
+        % Graficos
         f_plot(i,j,x1,x2,e,t);
     end 
 end

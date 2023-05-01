@@ -22,25 +22,25 @@ rxx2 = xcorr(x2);
 ry1x1 = xcorr(y1,x1);
 ry2x2 = xcorr(y2,x2);
 
+% Calculo de picos de la correlacion
 [p1, D1pos] = max(ry1x1);
 [p2, D2pos] = max(ry2x2);
 
-% Dipos nos da la posicion de la matrix en donde se encuentra el maximo,
-% como l va de valores positivos a negativos tenemos que encontrar el
-% verdadero valor de Di
-
+% Calculo del tiempo de retardo en muentras D
 D1 = D1pos - 5000;
 D2 = D2pos - 5000;
 
+% Calculo de las distancias respectivas
 d1 = (c*D1*Ts)/2;
 d2 = (c*D2*Ts)/2;
 
-% Distancia entre los dos intervalos de tiempo
+% Distancia del vehiculo entre los dos intervalos de tiempo
 d = d1-d2;
 
 % Velocidad del vehiculo
 v = d/dT;
 
+% Graficos
 figure(1)
     subplot(1,2,1), plot(l, rxx1,'r')
         axis([l(1), l(length(l)-2), 0 , 6000]);
