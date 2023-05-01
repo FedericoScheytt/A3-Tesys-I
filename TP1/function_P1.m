@@ -1,5 +1,5 @@
-function [x1, x2] = f_P1(x1i, x2i, T, e, tf)
-% f_P1(x1i, x2i, T, e, tf): Funcion que ...
+function [x1, x2] = function_P1(x1i, x2i, T, e, tf)
+% function_P1(x1i, x2i, T, e, tf): Funcion que ...
 %
 % INPUT: 
 %   x1i: 

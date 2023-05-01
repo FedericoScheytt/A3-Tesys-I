@@ -1,4 +1,4 @@
-% Script: s_P1_c.m
+% Script: script_P1_c.m
 % Author: Federico, Scheytt - Joaquin, Gonzalez Targon
 % Date: Mayo 2023
 
