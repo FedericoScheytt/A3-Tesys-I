@@ -1,3 +1,4 @@
+
 % Script: script_P1_c.m
 % Author: Federico, Scheytt - Joaquin, Gonzalez Targon
 % Date: Mayo 2023
@@ -12,7 +13,7 @@ tf = 100;
 %% Condiciones iniciales
 x1i = 0;
 x2i = 1;
-
+    
 %% Implementacion del metodo
 for i = 1:length(T)
     % Discretizacion
@@ -26,23 +27,17 @@ for i = 1:length(T)
             x2(n+1) = x2(n) + T(i).*(e(j).*((1-(x1(n)).^2).*x2(n)) - x1(n));
         end
         % Graficos
-        f_plot(i,j,x1,x2,e,t);
+        f_plot(i,j,x1,e,t);
     end 
 end
-
+    
 %% Funcion f_plot
-function f_plot(i,j,x1,x2,e,t)
+function f_plot(i,j,x1,e,t)
     figure(i)
-        subplot(2,4,j), plot(t,x1,'r')
+        subplot(2,2,j), plot(t,x1,'r')
             title(['$\varepsilon$ = ', num2str(e(j))],'Interpreter','latex')
             legend('x_{1}(t)', 'Location', 'northwest')
             xlabel('Tiempo [seg]')
             ylabel('x_{1}(t)')
-            hold on, grid on
-        subplot(2,4,j+4), plot(t,x2,'b')
-            title(['$\varepsilon$ = ', num2str(e(j))],'Interpreter','latex')
-            legend('x_{2}(t)', 'Location', 'northwest')
-            xlabel('Tiempo [seg]')
-            ylabel('x_{2}(t)')
             hold on, grid on
 end
