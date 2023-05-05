@@ -4,16 +4,16 @@
 
 clear, clc, close all
 
-% Constantes 
+%% Constantes 
 T = [0.001 0.1];
 e = [0 1 10 50];
 tf = 100;
 
-% Condiciones iniciales
+%% Condiciones iniciales
 x1i = 0;
 x2i = 1;
 
-% Implementacion del metodo
+%% Implementacion del metodo
 for i = 1:length(T)
     % Discretizacion
     t = 0:T(i):tf-T(i);
@@ -30,6 +30,7 @@ for i = 1:length(T)
     end 
 end
 
+%% Funcion f_plot
 function f_plot(i,j,x1,x2,e,t)
     figure(i)
         subplot(2,4,j), plot(t,x1,'r')
