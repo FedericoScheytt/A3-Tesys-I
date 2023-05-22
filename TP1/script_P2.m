@@ -44,7 +44,7 @@ ry2x2 = xcorr(y2,x2);
 figure(1)
     plot(l,ry1x1,'r', l, ry2x2, 'b')
         title('Correlacion cruzada')
-        legend('r_{y1x1}(l)', 'Location', 'northeast', 'r_{y1x1}(l)', 'Location', 'northeast')
+        legend('r_{y1x1}(l)', 'Location', 'northeast', 'r_{y2x2}(l)', 'Location', 'northeast')
         xlabel('Indice l')
         ylabel('Correlacion')
         hold on, grid on
