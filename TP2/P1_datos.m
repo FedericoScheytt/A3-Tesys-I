@@ -2,12 +2,14 @@
 % Author: Federico, Scheytt - Joaquin, Gonzalez Targon
 % Date: Junio 2023
 
-%% Datos
+% Datos
     J1 = 0.009;
     J2 = 0.009;
     b1 = 0.02;
     b2 = 0.02;
-    K1 = 2.7114;
-    K2 = 2.7114;
-    
+    k1 = 2.7114;
+    k2 = 2.7114;
+
     D = 4;
+        
+        
