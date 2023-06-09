@@ -2,7 +2,7 @@
 % Author: Federico, Scheytt - Joaquin, Gonzalez Targon
 % Date: Junio 2023
 
-clear,clc,close all 
+clear, clc, close all 
 
 %% Item b
     P1_datos
@@ -13,27 +13,27 @@ clear,clc,close all
     x0 = [0,0,0,0];
 
     %funcion
-    [T,x] = ode45('P1_ode_file',tspan,x0);
+    [T,x] = ode45('P1_function_ode_file',tspan,x0);
 
     %plot
     figure(1)
     subplot(2,2,1), plot(T,x(:,1),'r'),
-        title('Posicion de la masa 1')
+        title('Posicion de la masa 1 (\theta_{1}(t))')
         xlabel('Tiempo [seg]')
         ylabel('x_{1}(t)=\theta_{1}(t)[rad]')
         hold on, grid on
     subplot(2,2,2), plot(T,x(:,2),'b')
-        title('Velocidad de la masa 1')
+        title('Velocidad de la masa 1 (\omega_{1}(t))')
         xlabel('Tiempo [seg]')
         ylabel('x_{2}(t)=\omega_{1}(t)[rad/s]')
         hold on, grid on
     subplot(2,2,3), plot(T,x(:,3),'r')
-        title('Posicion de la masa 2')
+        title('Posicion de la masa 2 (\theta_{2}(t))')
         xlabel('Tiempo [seg]')
         ylabel('x_{3}(t)=\theta_{2}(t)[rad]')
         hold on, grid on
     subplot(2,2,4), plot(T,x(:,4),'b')
-        title('Velocidad de la masa 2')
+        title('Velocidad de la masa 2 (\omega_{2}(t))')
         xlabel('Tiempo [seg]')
         ylabel('x_{4}(t)=\omega_{2}(t)[rad/s]')
         hold on, grid on
@@ -67,13 +67,13 @@ clear,clc,close all
    
    figure(3)
     subplot(2,1,1), plot(T,x(:,1),'r',tExp, x1Exp, 'b'),
-        title('Posicion de la masa 1')
+        title('Posicion de la masa 1 (\theta_{1}(t))')
         legend('Teorica','Experimental')
         xlabel('Tiempo [seg]')
         ylabel('x_{1}(t)=\theta_{1}(t)[rad]')
         hold on, grid on
     subplot(2,1,2), plot(T,x(:,3),'r',tExp, x2Exp, 'b')
-        title('Posicion de la masa 2')
+        title('Posicion de la masa 2 (\theta_{2}(t))')
         legend('Teorica','Experimental')
         xlabel('Tiempo [seg]')
         ylabel('x_{3}(t)=\theta_{2}(t)[rad]')
