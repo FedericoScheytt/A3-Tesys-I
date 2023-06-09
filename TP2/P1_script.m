@@ -1,3 +1,7 @@
+% Script: P1_script.m
+% Author: Federico, Scheytt - Joaquin, Gonzalez Targon
+% Date: Junio 2023
+
 clear,clc,close all 
 
 %% Item b
