@@ -18,26 +18,22 @@ clear, clc, close all
 
     % Graficos
         figure(1)
-            subplot(2,2,1), plot(T,x(:,1),'r'),
+            subplot(2,2,1), plot(T,x(:,1),'r'), hold on, grid on
                 title('Posicion de la masa 1 (\theta_{1}(t))')
                 xlabel('Tiempo [seg]')
                 ylabel('x_{1}(t)=\theta_{1}(t)[rad]')
-                hold on, grid on
-            subplot(2,2,2), plot(T,x(:,2),'b')
+            subplot(2,2,2), plot(T,x(:,2),'b'), hold on, grid on
                 title('Velocidad de la masa 1 (\omega_{1}(t))')
                 xlabel('Tiempo [seg]')
                 ylabel('x_{2}(t)=\omega_{1}(t)[rad/s]')
-                hold on, grid on
-            subplot(2,2,3), plot(T,x(:,3),'r')
+            subplot(2,2,3), plot(T,x(:,3),'r'), hold on, grid on
                 title('Posicion de la masa 2 (\theta_{2}(t))')
                 xlabel('Tiempo [seg]')
                 ylabel('x_{3}(t)=\theta_{2}(t)[rad]')
-                hold on, grid on
-            subplot(2,2,4), plot(T,x(:,4),'b')
+            subplot(2,2,4), plot(T,x(:,4),'b'), hold on, grid on
                 title('Velocidad de la masa 2 (\omega_{2}(t))')
                 xlabel('Tiempo [seg]')
                 ylabel('x_{4}(t)=\omega_{2}(t)[rad/s]')
-                hold on, grid on
 %% Calculo de funcion tranferencia
     % Matrices 
         A = [0,1,0,0; -k1/J1,-b2/J1,k1/J1,0; 0,0,0,1; k1/J2,0,(-k1-k2)/J2,-b1/J2];
@@ -65,15 +61,13 @@ clear, clc, close all
   
     % Graficos comparativos
     figure(3)
-        subplot(2,1,1), plot(T,x(:,1),'r',evol(:,2), evol(:,4)/2544, 'b'),
+        subplot(2,1,1), plot(T,x(:,1),'r',evol(:,2), evol(:,4)/2544, 'b'), hold on, grid on
             title('Posicion de la masa 1 (\theta_{1}(t))')
             legend('Simulacion','Experimental')
             xlabel('Tiempo [seg]')
             ylabel('x_{1}(t)=\theta_{1}(t)[rad]')
-            hold on, grid on
-        subplot(2,1,2), plot(T,x(:,3),'r',evol(:,2), evol(:,5)/2544, 'b')
+        subplot(2,1,2), plot(T,x(:,3),'r',evol(:,2), evol(:,5)/2544, 'b'), hold on, grid on
             title('Posicion de la masa 2 (\theta_{2}(t))')
             legend('Simulacion','Experimental')
             xlabel('Tiempo [seg]')
             ylabel('x_{3}(t)=\theta_{2}(t)[rad]')
-            hold on, grid on

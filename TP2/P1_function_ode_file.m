@@ -1,4 +1,3 @@
-
 function dx = P1_function_ode_file(t,x)
     % P1_function_ode_file(t,x)
     % Author: Federcio Scheytt - Joaquin Gonzalez Targon
@@ -20,4 +19,4 @@ function dx = P1_function_ode_file(t,x)
                 x(4);
                 (1/J2)*(-b1*x(4) - k1*(x(3) - x(1)) - k2*x(3));
              ];
-
+end
