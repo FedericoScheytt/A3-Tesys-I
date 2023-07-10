@@ -49,6 +49,9 @@ clear, clc, close all
     % Polos y ceros
         polos = roots(den);
         ceros = roots(num);
+        
+%% Calculo de wn y xi
+    [wn, xi] = damp(G);
 
 %% Diagrama de bode
     % Bode
